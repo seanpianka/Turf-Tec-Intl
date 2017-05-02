@@ -1,4 +1,3 @@
 <?php
-$is_authenticated = false;
 
-?>
+$is_authenticated = false;

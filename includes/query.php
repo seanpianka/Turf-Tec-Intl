@@ -2,8 +2,9 @@
 
 require_once('constants.php');
 
-// https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17
-class db_conn {
+
+class db_conn  // https://www.binpress.com/tutorial/using-php-with-mysql-the-right-way/17
+{
     // The database connection
     protected static $connection;
     private $username;
@@ -28,17 +29,20 @@ class db_conn {
      *
      * @return bool false on failure / mysqli MySQLi object instance on success
      */
-    public function connect() {
+    public function connect()
+    {
         // Try and connect to the database
-        if(!isset(self::$connection)) {
+        if(!isset(self::$connection))
+        {
             // Load configuration as an array. Use the actual location of your configuration file
             $config = parse_ini_file('./config.ini');
             self::$connection = new mysqli('localhost',$config['username'],$config['password'],$config['dbname']);
         }
 
         // If connection was not successful, handle the error
-        if(self::$connection === false) {
-            // Handle error - notify administrator, log to a file, show an error screen, etc.
+        if(self::$connection === false)
+        {
+            die(DEFAULT_ERROR_MSG);
             return false;
         }
         return self::$connection;
@@ -50,10 +54,8 @@ class db_conn {
      * @param $mysqli_stmt The prepared statement with variables bound.
      * @return mixed The result of the mysqli::query() function
      */
-    public function execute($stmt) {
-        // Connect to the database
-        $connection = $this -> connect();
-
+    public function execute($stmt)
+    {
         // Query the database
         $stmt->execute();
         $result = $stmt->get_result();
@@ -114,10 +116,12 @@ class db_conn {
     public function select($query) {
         $rows = array();
         $result = $this -> query($query);
-        if($result === false) {
+        if($result === false)
+        {
             return false;
         }
-        while ($row = $result -> fetch_assoc()) {
+        while ($row = $result -> fetch_assoc())
+        {
             $rows[] = $row;
         }
         return $rows;
@@ -128,9 +132,10 @@ class db_conn {
      *
      * @return string Database error message
      */
-    public function error() {
-        $connection = $this -> connect();
-        return $connection -> error;
+    public function error()
+    {
+        $connection = $this->connect();
+        return $connection->error;
     }
 
     /**
@@ -146,14 +151,15 @@ class db_conn {
 }
 
 $creds = array();
-if ($handle = fopen(CREDENTIALS_FILE, "r")) {
+if ($handle = fopen(CREDENTIALS_FILE, "r"))
+{
     for ($i = 0; $i < 3 && ($line = fgets($handle)) !== false; ++$i)
     {
         array_push($creds, trim($line));
     }
 
     fclose($handle);
-} else {
-    // error opening the file.
 }
+else { die(DEFAULT_ERROR_MSG); }
+
 $db = new db_conn($creds[0], $creds[1], $creds[2]);
