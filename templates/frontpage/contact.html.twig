@@ -1,0 +1,90 @@
+{% extends "templates/base.html.twig" %}
+
+{% block title %}
+    Contact
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/contact.css">
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1>Contact Turf-Tec</h1>
+            <p class="lead">
+                Have a question about an placed order or product we offer? Contact us!
+            </p>
+
+            <form id="contact-form" method="post" role="form">
+                <input id="csrf_token" name="csrf_token" type="hidden" value="1493586478##43011a0e4a9fcdcfbabca3312aa5aad6ed720205">
+                <input id="csrf_token" name="csrf_token" type="hidden" value="1493586478##43011a0e4a9fcdcfbabca3312aa5aad6ed720205">
+                <!-- Error or success messages -->
+                <div class="messages"></div>
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">First name *</label>
+                            <input class="form-control" data-error="First name is required." id="firstname" name="firstname" placeholder="Please enter your first name." required type="text" value="">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="name">Last name *</label>
+                            <input class="form-control" data-error="Last name is required." id="lastname" name="lastname" placeholder="Please enter your last name." required type="text" value="">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="email">E-mail Address*</label>
+                            <input class="form-control" data-error="E-mail address is required." id="email" name="email" placeholder="Please enter your e-mail address." required type="email" value="">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input class="form-control" id="phonenumber" name="phonenumber" placeholder="Please enter your phone number" type="tel" value="">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <label for="message">Message *</label>
+                            <textarea class="form-control" data-error="Message is required." id="message" name="message" placeholder="Please enter your message." required rows="12"></textarea>
+                            <div class="help-block with-errors"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-12">
+                        <input class="btn btn-lg btn-success btn-signin" id="submit" name="submit" type="submit" value="Submit">
+                    </div>
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col-md-12">
+                        <p class="text-muted"><strong>*</strong>These fields are required.</p>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/contact.js"></script>
+    <script src="/static/js/validator.js"></script>
+{% endblock %}

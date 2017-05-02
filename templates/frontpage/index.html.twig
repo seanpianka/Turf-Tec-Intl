@@ -1,0 +1,81 @@
+{% extends "templates/base.html.twig" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+
+{% block main %}
+    <div class="row">
+
+        <div class="col-md-9" id="content">
+            <!-- for post in content_posts -->
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="text-center">Product Shortcuts</h2>
+                    <br>
+                    <div class="row">
+                        {% for category in product_categories %}
+                        <div class="col-lg-6 col-md-6 col-xs-6 thumb">
+                            <a class="thumbnail" href="/shop/listings.php?category={{ category[0] }}">
+                                <img class="img-responsive"
+                                     src="/static/img/products/shortcut/{{ category[0] }}.jpg" alt="">
+                            </a>
+                        </div>
+                        {% endfor %}
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- endfor -->
+            <div class="row">
+                <div class="col-md-12">
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Sidebar -->
+        <div class="col-md-3" id="sidebar">
+            <div class="row">
+                <div class="col-md-12">
+                    <img src="/static/img/credit_cards.jpg" class="img-responsive center-block">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center">
+                        Visit us!
+                    </h3>
+                    <p class="text-center">
+                        Turf-Tec International<br>
+                        1471 Capital Circle NW, # 13<br>
+                        Tallahassee, FL. 32303 USA<br>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="text-center">
+                        Contact us!
+                    </h3>
+                    <p class="text-center">
+                        Order Line: <a href="tel:+18002587477">(800) 258-7477</a><br>
+                        Phone: <a href="tel:+18505804026">(850) 580-4026</a><br>
+                        Fax: <a href="tel:+18505804027">(850) 580-4027</a><br>
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+{% endblock %}
+
+{% block js %}
+{% endblock %}
+

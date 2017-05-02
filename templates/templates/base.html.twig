@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- begin -->
+
+<head>
+    <title>{% block title %}{% endblock %} | Turf-Tec</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="/static/img/favicon.ico">
+
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="/static/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/css/base.css">
+    {% block css %}
+    {% endblock %}
+
+</head>
+
+<body>
+    <header>
+        {% include "templates/header.html.twig" %}
+    </header>
+
+    <main>
+        {% block main %}
+        {% endblock %}
+    </main>
+
+    <footer class="container-fluid" style="position:fixed">
+        {% include "templates/footer.html.twig" %}
+    </footer>
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+    {% block js %}
+    {% endblock %}
+</body>
+
+<!-- end -->
+</html>

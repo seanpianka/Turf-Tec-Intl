@@ -1,0 +1,8 @@
+#login-container {
+    max-width: 30%;
+}
+
+#profile-img {
+    border: 2px #DDDDDD solid;
+    border-radius: 5px;
+}

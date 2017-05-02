@@ -1,0 +1,38 @@
+/*!
+ * Start Bootstrap - Shop Item (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+.thumbnail img {
+    width: 100%;
+}
+
+.ratings {
+    padding-right: 10px;
+    padding-left: 10px;
+    color: #d17581;
+}
+
+.thumbnail {
+    padding: 0;
+}
+
+.thumbnail .caption-full {
+    padding: 9px;
+    color: #333;
+}
+
+#bottom-desc-buttons {
+    margin: 0em .5em .5em .5em;
+}
+
+#literature-container {
+    background-color: #ffffff;
+    padding-top: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
+    padding-bottom: .5em;
+    border: #DDDDDD 1px solid;
+    border-radius: 4px;
+}

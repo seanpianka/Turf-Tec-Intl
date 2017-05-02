@@ -1,0 +1,121 @@
+{% extends "templates/base.html.twig" %}
+
+{% block title %}
+    {{ product.model }}
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/product.css">
+{% endblock %}
+
+{% block main %}
+     <div class="row">
+         <div class="col-md-3">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    {{ shop_name_short }} Categories
+                </div>
+                <div class="panel-body">
+                    <div class="list-group">
+                        {% for category in product_categories %}
+                            <a href="/shop/listings.php?category={{ category[0] }}" class="list-group-item"> {{ category[1] }} Products</a>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+         </div>
+
+            <div class="col-md-9">
+                <div class="thumbnail">
+                    <div class="row carousel-holder">
+                        <div class="col-md-12">
+                            <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+                                <ol class="carousel-indicators">
+                                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+                                    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                                </ol>
+                                <div class="carousel-inner">
+                                    <div class="item active">
+                                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    </div>
+                                    <div class="item">
+                                        <img class="slide-image" src="http://placehold.it/800x300" alt="">
+                                    </div>
+                                </div>
+                                <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left"></span>
+                                </a>
+                                <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right"></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="caption-full">
+                        <h4 class="pull-right">${{ product.price }}</h4>
+                        <h4><a href="#">{{ product.name }}</a>
+                        </h4>
+                        <p>{{ product.long_description }}</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <a class="btn btn-success" style="margin: 0 .5em .5em .5em;"
+                               data-toggle="collapse" data-target="#literature-container"
+                               aria-expanded="false" aria-controls="literature-container">
+                                View Product Literature
+                            </a>
+                        </div>
+                        <div class="col-sm-6 col-md-6 col-lg-6">
+                            <a class="btn btn-success pull-right" style="margin: 0 .5em .5em .5em;">Add to Cart</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="collapse" id="literature-container">
+                    <div class="caption-full">
+                        <h4>Product Literature</h4>
+                        <hr>
+                        <p id="literature">
+                            {{ product.literature  }}
+                            <br><br>
+                            {{ product.literature  }}
+                            <br><br>
+                            {{ product.literature  }}
+                            <br><br>
+                            {{ product.literature  }}
+                        </p>
+                        <hr>
+                        <p>
+                            If you'd like to know more, feel free to <a href="/contact/">contact us with any questions!</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+{% endblock %}
+
+{% block js %}
+    <script>
+	$('#show').on('click', function () {
+	    $('#literature-container').each(function(i, obj) {
+	    	if (document.getElementById(obj.getAttribute("data-target").substring(1)).className == "collapse") {
+		    	obj.click();
+	    	}
+	    });
+	});
+	$('#hide').on('click', function () {
+	    $('#literature-container').each(function(i, obj) {
+	    	if (document.getElementById(obj.getAttribute("data-target").substring(1)).className == "collapse in") {
+		    	obj.click();
+	    	}
+	    });
+	});
+	</script>
+{% endblock %}

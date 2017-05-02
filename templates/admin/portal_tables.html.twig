@@ -1,0 +1,116 @@
+{% extends "templates/portal.html.twig" %}
+
+{% block title %}
+    Portal Database
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/portal_tables.css">
+    <!--<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs/dt-1.10.13/se-1.2.0/datatables.min.css"/>-->
+{% endblock %}
+
+{% block portal_content %}
+<div class="row">
+    {% for table in tables %}
+    <div class="panel panel-default">
+        <div class="panel-heading clearfix">
+            <h4 class="pull-left">{{ table['name'] }}</h4>
+            <div class="input-group">
+                <div class="input-group-btn">
+                    <button class="btn btn-default float-right"
+                            title="Add {{ table['name'] }}"
+                            id="{{ table['name'] }}-add"
+                            value="{{ table['name'] }}-add">
+                        <i class="glyphicon glyphicon-plus"></i>
+                    </button>
+                    <button class="btn btn-default float-right"
+                            title="Remove {{ table['name'] }}"
+                            id="{{ table['name'] }}-remove"
+                            value="{{ table['name'] }}-remove">
+                        <i class="glyphicon glyphicon-minus"></i>
+                    </button>
+                    <button class="btn btn-default float-right"
+                            title="Edit {{ table['name'] }}"
+                            id="{{ table['name'] }}-edit"
+                            onclick=""
+                            value="{{ table['name'] }}-edit">
+                        <i class="glyphicon glyphicon-pencil"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 10px;">
+            <table id="{{ table['name'] }}" class="display table" width="100%" cellspacing="0">
+                <thead>
+                <tr>
+                    {% for column in table['columns'] %}
+                        <th>{{ column }}</th>
+                    {% endfor %}
+                </tr>
+                </thead>
+                <tbody>
+                {% for row in table['data'] %}
+                    <tr>
+                        {% for column, data in row.items()
+                   if column in table['columns'] %}
+                            <td>
+                                {{ data }}
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block js %}
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs/dt-1.10.13/se-1.2.0/datatables.min.js"></script>
+
+    <script>
+        function get_selected_ids(table_name) {
+            var selected_ids = [];
+
+            $.each($("#" + table_name + ' tr.selected'), function(){
+                selected_ids.push(Number(($(this).find('td').eq(0).text())))  // index 0 will always return id
+            });
+
+            return selected_ids;
+        }
+
+        var tables = [],
+            table_name = "",
+            table;
+
+        {% for table in tables %}
+        tables.push("{{ table['name'] }}");
+        {% endfor %}
+
+        $(document).ready(function() {
+            for (let i = 0; i < tables.length; ++i) {
+                table_name = String('#' + tables[i]);
+
+                table = $(table_name).DataTable({
+                    order: [[ 3, "desc" ]],
+                    select: true
+                });
+
+                //$(table_name + ' tbody').on('click', 'tr', function() {});
+
+                $(table_name+'-add').click(function(){
+                    console.log(get_selected_ids(tables[i]));
+                });
+                $(table_name+'-remove').click(function(){
+                    console.log(get_selected_ids(tables[i]));
+                });
+                $(table_name+'-edit').click(function(){
+                    console.log(get_selected_ids(tables[i]));
+                });
+            }
+        });
+    </script>
+ }
+{% endblock %}

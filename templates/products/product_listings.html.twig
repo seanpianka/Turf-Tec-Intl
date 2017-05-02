@@ -1,0 +1,95 @@
+{% extends "templates/base.html.twig" %}
+
+{% block title %}
+    {{ category[1] }} Products
+{% endblock %}
+
+{% block css %}
+    <link rel="stylesheet" href="/static/css/instruments.css">
+{% endblock %}
+
+{% block main %}
+
+    <div class="row">
+        <div class="col-md-12">
+            <h2 class="text-center">{{ category[1] }} Products</h2>
+            <hr>
+        </div>
+    </div>
+
+    <!-- Credit to Ajay Patel, https://codepen.io/ajaypatelaj/ -->
+    <div class="well well-sm">
+        <strong>View as: &nbsp;</strong>
+        <div class="btn-group">
+            <a href="#" id="list" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th-list"></span>
+                List
+            </a>
+            <a href="#" id="grid" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-th"></span>
+                Grid
+            </a>
+        </div>
+        &nbsp;
+        <strong>Sort By:</strong>
+        <div class="btn-group">
+            <select></select>
+        </div>
+        &nbsp;
+        <strong>View Per Page:</strong>
+        <div class="btn-group">
+            <select></select>
+        </div>
+        &nbsp;
+        <div class="btn-group pull-right">
+            <a href="/shop/" class="btn btn-default btn-sm">
+                <span class="glyphicon glyphicon-arrow-left"></span>
+                Back to Shop
+            </a>
+        </div>
+    </div>
+
+    {% for product_group in products %}
+    <div id="products" class="row list-group">
+
+        {% for product in product_group %}
+        <div class="item col-xs-4 col-sm-4 col-md-4 col-lg-4">
+            <div class="thumbnail">
+                <img class="group list-group-image img-responsive" src="{{ product.img }}" alt="">
+
+                <div class="caption">
+                    <h4 class="group inner list-group-item-heading">
+                        <a class="product-title"
+                           href="/shop/product.php?category={{ category[0] }}&product_model={{ product.model }}">
+                            {{ product.name }}
+                        </a>
+                    </h4>
+                    <p class="group inner list-group-item-text">
+                        {{ product.short_description }}
+                    </p>
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <p class="lead">
+                                ${{ product.price }}
+                            </p>
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <a class="btn btn-success" href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endfor %}
+
+    </div>
+{% endblock %}
+
+{% block js %}
+    <script src="/static/js/product_shop.js"></script>
+{% endblock %}
+
