@@ -5,48 +5,217 @@
 {% endblock %}
 
 {% block css %}
+<!-- Template styles -->
+<style rel="stylesheet">
+    /* TEMPLATE STYLES */
+
+    main {
+        padding-top: 7rem;
+        padding-bottom: 2rem;
+    }
+
+    .extra-margins {
+        margin-top: 1rem;
+        margin-bottom: 2.5rem;
+    }
+
+    .navbar {
+        background-color: #3b3b3f;
+    }
+
+    footer.page-footer {
+        background-color: #3b3b3f;
+        margin-top: 2rem;
+    }
+    .navbar .btn-group .dropdown-menu a:hover {
+        color: #000 !important;
+    }
+    .navbar .btn-group .dropdown-menu a:active {
+        color: #fff !important;
+    }
+</style>
 {% endblock %}
 
 {% block main %}
-    <article>
-        <section>
-            Turf-Tec International is the leading manufacturer of diagnostic turfgrass tools and environmental test equipment in the world.  We invent, design and manufacture Soil Samplers, Moisture Meters, Infiltration Test equipment and many other diagnostic tools.
-        </section>
-        <br>
-        <section>
-            <img src="/static/img/history/history_1.jpg" class="img-responsive pull-right">
-            Turf-Tec International was started by the late Tom Mascaro in 1976 to manufacture tools that would benefit the Golf Course Superintendents and Sports Turf Managers in their everyday maintenance. Turf-Tec International is now headed by John Mascaro, who joined the company in 1987 and is Tom's son who is carrying on the family tradition of introducing innovative tools to aid the superintendent.  John is also well known for writing the "John Mascaro's Photo Quiz" in Golf Course Management Magazine, which is one of the most respected trade publications in the world of Golf Course Management and the official publication of the Golf Course Superintendents Association of America (GCSAA).  This monthly feature is a photographic question and answer section with photos of common turfgrass problems and their sometimes surprising answers.  The article "John Mascaro's Photo Quiz" also is run in the official publication of the Sports Turf Managers Association of America (STMA) called SportsTurf Magazine.
-        </section>
-        <br>
-        <section>
-            Tom Mascaro was best known as the inventor of the Aerifier in 1946 and the Verti-Cut in 1955. These inventions have become standard management practices on every golf course and athletic field in the world.
-        </section>
-        <br>
-        <section>
-            <img src="/static/img/history/history_2.jpg" class="img-responsive pull-left">
-            Turf-Tec International was started by Tom Mascaro in 1976. Tom Mascaro was best known as the inventor of the Aerifier in 1946.Turf-Tec International was started by Tom Mascaro in 1976. Tom Mascaro was best known as the inventor of the the Verti-Cut in 1955
-        </section>
-        <br>
-        <section>
-            Tom Mascaro also invented over 100 turf related inventions through his career and received many honors. Among them were the United States Green Section Award, Golf Course Superintendents Association's Distinguished Service Award and the Lifetime Achievement Award from the Sports Turf Managers Association. There is even a Museum on the grounds of Penn State University named the Mascaro/Steiniger Turfgrass Equipment Museum named after Tom Mascaro and his long time superintendent friend Eb Steiniger.
-        </section>
-        <br>
-        <section>
-            History of Tom Mascaro http://archive.lib.msu.edu/tic/gcman/article/1997jan212.pdf
-        </section>
-        <br>
-        <section>
-            With Tom's insight and John's direction, Turf-Tec International has developed a line of diagnostic instruments for turf that until now were only available to researchers at Universities. These instruments are simple to use yet give meaningful results. These diagnostic tools are used to maintain healthy turfgrass, lawns, golf courses and sports fields. We are also developing new technology for the engineering and environmental sector to preserve our most precious resource, water.
-        </section>
-        <br>
-        <section>
-            Turf-Tec International is committed to developing new products and new techniques to keep turf healthy based upon the time proven methods of finding out the cause of problems rather then treating the symptoms.
-        </section>
-        <br>
-        <section>
-            Our products are the highest quality and fully warranted.
-        </section>
-    </article>
+<main>
+
+    <!--Main layout-->
+    <div class="container">
+        <!--First row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <div class="col-lg-7">
+                <!--Featured image -->
+                <div class="view overlay hm-white-light z-depth-1-half">
+                    <img src="https://mdbootstrap.com/img/Photos/Slides/img%20%2877%29.jpg" class="img-fluid " alt="">
+                    <div class="mask">
+                    </div>
+                </div>
+                <br>
+            </div>
+
+            <!--Main information-->
+            <div class="col-lg-5">
+                <h2 class="h2-responsive font-bold">We Are Turf Professionals</h2>
+                <hr>
+                <p>{{ SHOP_NAME }} is committed to developing new products and new techniques to keep turf healthy based upon the time proven methods of finding out the cause of problems rather then treating the symptoms. Our products are the highest quality and fully warranted.</p>
+                <a href="" class="btn btn-info">Get it now!</a>
+            </div>
+        </div>
+        <!--/.First row-->
+
+        <hr class="extra-margins my-5">
+
+        <!--Second row-->
+        <div class="row pt-4">
+            <!--First columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.4s">
+
+                    <!--Card image-->
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(37).jpg" alt="Card image cap">
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title text-center">Reliable Tools</h4>
+                        <hr>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--First columnn-->
+
+            <!--Second columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.6s">
+
+                    <!--Card image-->
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(21).jpg" alt="Card image cap">
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title text-center">Quality Service</h4>
+                        <hr>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--Second columnn-->
+
+            <!--Third columnn-->
+            <div class="col-lg-4">
+                <!--Card-->
+                <div class="card wow fadeIn" data-wow-delay="0.8s">
+
+                    <!--Card image-->
+                    <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Horizontal/Work/4-col/img%20(12).jpg" alt="Card image cap">
+
+                    <!--Card content-->
+                    <div class="card-body">
+                        <!--Title-->
+                        <h4 class="card-title text-center">Dedicated Professionals</h4>
+                        <hr>
+                        <!--Text-->
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    </div>
+
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--Third columnn-->
+        </div>
+        <!--/.Second row-->
+
+        <hr>
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <p class="text-center font-weight-bold">
+                    <a href="http://archive.lib.msu.edu/tic/gcman/article/1997jan212.pdf">History of Tom Mascaro</a>
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <p class="excerpt">
+                    Turf-Tec International is the leading manufacturer of diagnostic turfgrass tools and environmental test equipment in the world.  We invent, design and manufacture Soil Samplers, Moisture Meters, Infiltration Test equipment and many other diagnostic tools.
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <img src="/static/img/history/history_1.jpg" class="img-fluid float-right z-depth-1-half">
+                <p class="excerpt">
+                    Turf-Tec International was started by the late Tom Mascaro in 1976 to manufacture tools that would benefit the Golf Course Superintendents and Sports Turf Managers in their everyday maintenance. Turf-Tec International is now headed by John Mascaro, who joined the company in 1987 and is Tom's son who is carrying on the family tradition of introducing innovative tools to aid the superintendent.  John is also well known for writing the "John Mascaro's Photo Quiz" in Golf Course Management Magazine, which is one of the most respected trade publications in the world of Golf Course Management and the official publication of the Golf Course Superintendents Association of America (GCSAA).  This monthly feature is a photographic question and answer section with photos of common turfgrass problems and their sometimes surprising answers.  The article "John Mascaro's Photo Quiz" also is run in the official publication of the Sports Turf Managers Association of America (STMA) called SportsTurf Magazine.
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <img src="/static/img/history/history_2.jpg" class="img-fluid float-left z-depth-1-half" style="margin-right: 0.5rem; ">
+                <p class="excerpt">
+                    Tom Mascaro was best known as the inventor of the Aerifier in 1946 and the Verti-Cut in 1955. These inventions have become standard management practices on every golf course and athletic field in the world. Turf-Tec International was started by Tom Mascaro in 1976. Tom Mascaro was best known as the inventor of the Aerifier in 1946.Turf-Tec International was started by Tom Mascaro in 1976. Tom Mascaro was best known as the inventor of the the Verti-Cut in 1955. Tom Mascaro also invented over 100 turf related inventions through his career and received many honors. Among them were the United States Green Section Award, Golf Course Superintendents Association's Distinguished Service Award and the Lifetime Achievement Award from the Sports Turf Managers Association. There is even a Museum on the grounds of Penn State University named the Mascaro/Steiniger Turfgrass Equipment Museum named after Tom Mascaro and his long time superintendent friend Eb Steiniger.
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <p class="excerpt">
+                    With Tom's insight and John's direction, Turf-Tec International has developed a line of diagnostic instruments for turf that until now were only available to researchers at Universities. These instruments are simple to use yet give meaningful results. These diagnostic tools are used to maintain healthy turfgrass, lawns, golf courses and sports fields. We are also developing new technology for the engineering and environmental sector to preserve our most precious resource, water.
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+        <!--row-->
+        <div class="row wow fadeIn" data-wow-delay="0.2s">
+            <!--First columnn-->
+            <div class="col-lg-12">
+                <p class="excerpt">
+                </p>
+            </div>
+            <!--First columnn-->
+        </div>
+        <!--/.row-->
+
+                    
+        </div>
+    </div>
+    <!--/.Main layout-->
+
+</main>
 {% endblock %}
 
 {% block js %}

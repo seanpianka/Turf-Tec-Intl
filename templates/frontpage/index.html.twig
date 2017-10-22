@@ -5,75 +5,734 @@
 {% endblock %}
 
 {% block css %}
-    <link rel="stylesheet" href="/static/css/index.css">
 {% endblock %}
 
 {% block main %}
-    <div class="row">
-
-        <div class="col-md-9" id="content">
-            <!-- for post in content_posts -->
-            <div class="row">
-                <div class="col-md-12">
-                    <h2 class="text-center">Product Shortcuts</h2>
-                    <br>
-                    <div class="row">
-                        {% for category in product_categories %}
-                        <div class="col-lg-6 col-md-6 col-xs-6 thumb">
-                            <a class="thumbnail" href="/shop/listings.php?category={{ category[0] }}">
-                                <img class="img-responsive"
-                                     src="/static/img/products/shortcut/{{ category[0] }}.jpg" alt="">
-                            </a>
-                        </div>
-                        {% endfor %}
-
+<div class="view hm-white-light jarallax" data-jarallax='{"speed": 0.2}' style="background-image: url(../../static/img/index_golf_course.jpg);">
+    <div class="full-bg-img">
+        <div class="container flex-center">
+            <div class="row pt-5 mt-3">
+                <div class="col-md-12 mb-3">
+                    <div class="intro-info-content text-center">
+                        <h1 class="display-3 mb-5 wow fadeInDown" data-wow-delay="0.3s"><a class="white-text font-bold stroke-text">{{ SHOP_NAME }}</a></h1>
+                        <h5 class="font-up mb-5 mt-1 font-bold wow fadeInDown white-text" data-wow-delay="0.3s">Leading manufacturer of diagnostic turfgrass, environmental, and infiltration tools.</h5>
+                        <a class="btn btn-outline-elegant btn-lg wow fadeInDown" data-wow-delay="0.3s">Learn</a> 
+                        <a class="btn btn-elegant btn-lg wow fadeInDown" data-wow-delay="0.3s">Shop</a> 
                     </div>
                 </div>
             </div>
-
-            <!-- endfor -->
-            <div class="row">
-                <div class="col-md-12">
-
-                </div>
-            </div>
-
         </div>
-
-        <!-- Sidebar -->
-        <div class="col-md-3" id="sidebar">
-            <div class="row">
-                <div class="col-md-12">
-                    <img src="/static/img/credit_cards.jpg" class="img-responsive center-block">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="text-center">
-                        Visit us!
-                    </h3>
-                    <p class="text-center">
-                        Turf-Tec International<br>
-                        1471 Capital Circle NW, # 13<br>
-                        Tallahassee, FL. 32303 USA<br>
-                    </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="text-center">
-                        Contact us!
-                    </h3>
-                    <p class="text-center">
-                        Order Line: <a href="tel:+18002587477">(800) 258-7477</a><br>
-                        Phone: <a href="tel:+18505804026">(850) 580-4026</a><br>
-                        Fax: <a href="tel:+18505804027">(850) 580-4027</a><br>
-                    </p>
-                </div>
-            </div>
-        </div>
-
     </div>
+</div>
+<main>
+    <div class="container">
+        <!--Projects section v.4-->
+        <section class="section pb-5 wow fadeIn">
+
+            <!--Section heading-->
+            <h2 class="section-heading h1 mt-5"><strong>Our Products</strong></h2>
+            <!--Section description-->
+            <p class="section-description">Take a look at our amazing products, and feel free to contact us at any questions through our <a href="#">contact form</a>!</p>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-md-12 mb-r">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/slide%20(31).jpg');">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <a href="#" class="yellow-text"><h5><i class="fa fa-plane pr-2"></i>Professional</h5></a>
+                                <h3 class="mb-4 mt-4"><strong>Turf Management</strong></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus quod minima assumenda qui mollitia architecto soluta at ipsa itaque nam, aliquam minus odit expedita voluptatibus fugiat amet, nostrum error dolorum!.</p>
+                                <a href="/shop/listings.php?category=turf_management" class="btn btn-yellow btn-sm"><i class="fa fa-clone left"></i> View products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-r">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(60).jpg');">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <a href="#" class="blue-text"><h5><i class="fa fa-camera pr-2"></i>Analysis</h5></a>
+                                <h3 class="mb-4 mt-4"><strong>Water Analysis</strong></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
+                                <a href="/shop/listings.php?category=water_analysis" class="btn btn-blue btn-sm"><i class="fa fa-clone left"></i> View products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-r">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(58).jpg');">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <a href="" class="green-text"><h5><i class="fa fa-eye pr-2"></i>Management</h5></a>
+                                <h3 class="mb-4 mt-4"><strong>Turf Nutrition</strong></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
+                                <a href="/shop/listings.php?category=soil_nutrition" class="btn btn-green btn-sm"><i class="fa fa-clone left"></i> View products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-r">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(60).jpg');">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <a href="" class="green-text"><h5><i class="fa fa-camera pr-2"></i>Analysis</h5></a>
+                                <h3 class="mb-4 mt-4"><strong>Grass Analysis</strong></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
+                                <a href="/shop/listings.php?category=grass_analysis" class="btn btn-green btn-sm"><i class="fa fa-clone left"></i> View products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-md-6 mb-r">
+                    <div class="card card-image" style="background-image: url('https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(58).jpg');">
+                        <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+                            <div>
+                                <a href="" class="brown-text"><h5><i class="fa fa-eye pr-2"></i>Management</h5></a>
+                                <h3 class="mb-4 mt-4"><strong>Soil Nutrition</strong></h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem, optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.</p>
+                                <a href="/shop/listings.php?category=soil_nutrition" class="btn btn-brown btn-sm"><i class="fa fa-clone left"></i> View products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Grid column-->
+
+            </div>
+            <!--Grid row-->
+
+        </section>
+        <!--Projects section v.4-->
+    </div>
+
+    <!-- Streak Section -->
+    <div class="streak streak-photo" style="background-image:url('http://mdbootstrap.com/img/Photos/Others/img (42)jpg')">
+       
+        <div class="flex-center white-text">
+            <ul>
+                <li><h1 class=" white-text"><strong>Hundreds</strong> of happy customers</h1></li>
+
+            </ul>
+        </div>
+        
+    </div>
+    <!-- /.Streak Section -->  
+       
+    <div class="container">
+        <!--Section: Products v.3-->
+        <section class="section pb-3 wow fadeIn" data-wow-delay="0.3s">
+
+            <!--Section heading-->
+            <h1 class="section-heading h1 pt-4">Problem Areas</h1>
+            <!--Section description-->
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+
+            <!--Grid row-->
+            <div class="row">
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-r">
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight z-depth-1">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(36).jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center no-padding">
+                            <!--Category & Title-->
+                            <a href="" class="text-muted"><h5>Blouse</h5></a>
+                            <h4 class="card-title"><strong><a href="">Golf Course</a></strong></h4>
+                            <!--Description-->
+                            <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                            </p>
+                            <!--Card footer-->
+                            <div class="card-footer">
+                                <span class="left">59$ <span class="discount">199$</span></span>
+                                <span class="right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a></span>
+                            </div>
+                        </div>
+                        <!--Card content-->
+                    </div>
+                    <!--Card-->
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-r">
+                    <!--Card-->
+                    <div class="card">
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight z-depth-1">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(37).jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center no-padding">
+                            <!--Category & Title-->
+                            <a href="" class="text-muted"><h5>Accessories</h5></a>
+                            <h4 class="card-title"><strong><a href="">Sports Turf</a></strong></h4>
+
+                            <!--Description-->
+                            <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor.
+                            </p>
+
+                            <!--Card footer-->
+                            <div class="card-footer">
+                                <span class="left">39$ <span class="discount">99$</span></span>
+                                <span class="right"><a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a></span>
+                            </div>
+
+                        </div>
+                        <!--Card content-->
+
+                    </div>
+                    <!--Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-3 col-md-6 mb-r">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight z-depth-1">
+                            <img src="/static/img/index_golf_course.jpg" class="img-fluid" style="max-height:100%;max-width:100%;width:auto;" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center no-padding">
+                            <!--Category & Title-->
+                            <a href="" class="text-muted"><h5>Engineering</h5></a>
+                            <h4 class="card-title"><strong><a href="">Engineering</a></strong></h4>
+
+                            <!--Description-->
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima.
+                            </p>
+
+                            <!--Card footer-->
+                            <div class="card-footer">
+                                <span class="left">79$ <span class="discount">299$</span></span>
+                                <span class="right"><a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a></span>
+                            </div>
+
+                        </div>
+                        <!--Card content-->
+
+                    </div>
+                    <!--Card-->
+
+                </div>
+                <!--Grid column-->
+
+                <!--Fourth column-->
+                <div class="col-lg-3 col-md-6 mb-r">
+
+                    <!--Card-->
+                    <div class="card">
+
+                        <!--Card image-->
+                        <div class="view overlay hm-white-slight z-depth-1">
+                            <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/img%20(39).jpg" class="img-fluid" alt="">
+                            <a>
+                                <div class="mask"></div>
+                            </a>
+                        </div>
+                        <!--Card image-->
+
+                        <!--Card content-->
+                        <div class="card-body text-center no-padding">
+                            <!--Category & Title-->
+                            <a href="" class="text-muted"><h5>Lawn Care</h5></a>
+                            <h4 class="card-title"><strong><a href="">Lawn Care</a></strong></h4>
+
+                            <!--Description-->
+                            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima.
+                            </p>
+
+                            <!--Card footer-->
+                            <div class="card-footer">
+                                <span class="left">79$ <span class="discount">299$</span></span>
+                                <span class="right"><a class="active" data-toggle="tooltip" data-placement="top" title="Added to Wishlist"><i class="fa fa-heart"></i></a></span>
+                            </div>
+
+                        </div>
+                        <!--Card content-->
+
+                    </div>
+                    <!--Card-->
+
+                </div>
+                <!--Fourth column-->
+
+            </div>
+            <!--Grid row-->
+            
+        </section>
+        <!--Section: Products v.3-->
+        
+        <hr class="mb-5 mt-4">
+           
+        <!--Section: Products v.5-->
+        <section class="section pb-3 wow fadeIn" data-wow-delay="0.3s">
+
+            <!--Section heading-->
+            <h1 class="section-heading h1 pt-4">Last products</h1>
+            <!--Section description-->
+            <p class="section-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, error amet numquam iure provident voluptate esse quasi, veritatis totam voluptas nostrum quisquam eum porro a pariatur accusamus veniam.</p>
+
+            <!--Carousel Wrapper-->
+            <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
+
+                <!--Controls-->
+                <div class="controls-top">
+                    <a class="btn-floating primary-color" href="#multi-item-example" data-slide="prev"><i class="fa fa-chevron-left"></i></a>
+                    <a class="btn-floating primary-color" href="#multi-item-example" data-slide="next"><i class="fa fa-chevron-right"></i></a>
+                </div>
+                <!--Controls-->
+
+                <!--Indicators-->
+                <ol class="carousel-indicators">
+                    <li class="primary-color" data-target="#multi-item-example" data-slide-to="0" class="active"></li>
+                    <li class="primary-color" data-target="#multi-item-example" data-slide-to="1"></li>
+                    <li class="primary-color" data-target="#multi-item-example" data-slide-to="2"></li>
+                </ol>
+                <!--Indicators-->
+
+                <!--Slides-->
+                <div class="carousel-inner" role="listbox">
+
+                    <!--First slide-->
+                    <div class="carousel-item active">
+
+                        <div class="col-md-4">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(39).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Shoes</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Leather boots</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">69$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(22).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Jeans</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Slim jeans</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">99$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Others/img%20(31).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Shorts</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Denim shorts</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">49$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                    </div>
+                    <!--First slide-->
+
+                    <!--Second slide-->
+                    <div class="carousel-item">
+
+                        <div class="col-md-4">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(30).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Accessories</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Summer hat</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">39$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(37).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Shoes</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Black heels</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">79$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(31).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Outerwear</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Black jacket</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">149$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                    </div>
+                    <!--Second slide-->
+
+                    <!--Third slide-->
+                    <div class="carousel-item">
+
+                        <div class="col-md-4">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(38).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Accessories</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Leather bag</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">29$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/belt.jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Accessories</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Leather belt</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">89$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                        <div class="col-md-4 clearfix d-none d-sm-block">
+
+                            <!--Card-->
+                            <div class="card card-cascade narrower">
+
+                                <!--Card image-->
+                                <div class="view overlay hm-white-slight">
+                                    <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Products/img%20(57).jpg" class="img-fluid" alt="">
+                                    <a>
+                                        <div class="mask"></div>
+                                    </a>
+                                </div>
+                                <!--Card image-->
+
+                                <!--Card content-->
+                                <div class="card-body text-center no-padding">
+                                    <!--Category & Title-->
+                                    <a href="" class="text-muted"><h5>Shoes</h5></a>
+                                    <h4 class="card-title"><strong><a href="">Sneakers</a></strong></h4>
+
+                                    <!--Description-->
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing minima veniam elit. Nam incidunt eius est voluptatibus.
+                                    </p>
+
+                                    <!--Card footer-->
+                                    <div class="card-footer">
+                                        <span class="left">129$</span>
+                                        <span class="right">
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Quick Look"><i class="fa fa-eye"></i></a>
+                                <a class="" data-toggle="tooltip" data-placement="top" title="Add to Wishlist"><i class="fa fa-heart"></i></a>
+                                </span>
+                                    </div>
+
+                                </div>
+                                <!--Card content-->
+
+                            </div>
+                            <!--Card-->
+
+                        </div>
+
+                    </div>
+                    <!--Third slide-->
+
+                </div>
+                <!--Slides-->
+
+            </div>
+            <!--Carousel Wrapper-->
+
+        </section>
+        <!--Section: Products v.5-->
+        
+        
+    </div>
+        
+
+</main>
 {% endblock %}
 
 {% block js %}

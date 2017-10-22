@@ -27,7 +27,7 @@ $template = $twig->render(
     array(
         "product" => $product,
         "product_categories" => $product_categories,
-        "shop_name_short" => "Turf-Tec"
+        "SHOP_NAME_SHORT" => SHOP_NAME_SHORT
     )
 );
 echo $template;

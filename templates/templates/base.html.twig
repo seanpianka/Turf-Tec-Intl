@@ -12,31 +12,40 @@
 
     <link rel="shortcut icon" href="/static/img/favicon.ico">
 
-    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/css/bootstrap-theme.min.css">
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="/static/css/font-awesome.min.css">
-    <link rel="stylesheet" href="/static/css/base.css">
+    <!-- Bootstrap core CSS -->
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="/static/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="/static/css/style.css" rel="stylesheet">
+
     {% block css %}
     {% endblock %}
 
 </head>
 
 <body>
-    <header>
-        {% include "templates/header.html.twig" %}
-    </header>
+    {% include "templates/header.html.twig" %}
 
-    <main>
-        {% block main %}
-        {% endblock %}
-    </main>
+    {% block main %}
+    {% endblock %}
 
-    <footer class="container-fluid" style="position:fixed">
-        {% include "templates/footer.html.twig" %}
-    </footer>
+    {% include "templates/footer.html.twig" %}
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="/static/js/bootstrap.min.js"></script>
+    <!-- SCRIPTS -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="/static/js/jquery-3.2.1.min.js"></script>
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="/static/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script type="text/javascript" src="/static/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script type="text/javascript" src="/static/js/mdb.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
     {% block js %}
     {% endblock %}
 </body>

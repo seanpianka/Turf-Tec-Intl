@@ -28,7 +28,8 @@ $template = $twig->render(
     array(
         "products" => $products,
         "product_categories" => $product_categories,
-        "category" => $selected_categories
+        "category" => $selected_categories,
+        "SHOP_NAME_SHORT" => SHOP_NAME_SHORT,
     )
 );
 echo $template;

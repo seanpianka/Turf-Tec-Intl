@@ -10,7 +10,9 @@ $twig = new Twig_Environment($loader);
 $template = $twig->render(
     "frontpage/index.html.twig",
     array(
-        "product_categories" => $product_categories
+        "product_categories" => $product_categories,
+        "SHOP_NAME" => SHOP_NAME,
+        "SHOP_NAME_SHORT" => SHOP_NAME_SHORT
     )
 );
 echo $template;
